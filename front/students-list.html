@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Estudiantes</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h1>Listado de Estudiantes</h1>
+    <form id="search-form">
+        <div class="form-group">
+            <label for="practiceId">ID de la Práctica</label>
+            <input type="text" class="form-control" id="practiceId" placeholder="Ingrese el ID de la práctica">
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+    <div id="students-list" class="mt-4">
+        <!-- Aquí se mostrará el listado de estudiantes -->
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
