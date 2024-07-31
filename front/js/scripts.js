@@ -118,9 +118,48 @@ const cargarResumen= () => {
 
 
 
+const CargarEstudiantes = () => {
+    const practicaId = document.getElementById('practicaId').value;
+    console.log(practicaId);
+
+    fetch(`http://localhost:8080/estudiante/practica/${practicaId}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(responseData => {
+        console.log(responseData);
+        const estudiantesContainer = document.getElementById('estudiantesContainer');
+        estudiantesContainer.innerHTML = ''; // Limpiar detalles anteriores
+
+        if (responseData.status === 'FOUND' && Array.isArray(responseData.data)) {
+            responseData.data.forEach(estudiante => {
+                const estudianteDiv = document.createElement('div');
+                estudianteDiv.classList.add('card', 'mb-2'); // Añadir estilos de Bootstrap
+                estudianteDiv.innerHTML = `
+                    <div class="card-body">
+                        <h5 class="card-title">${estudiante.nombre} ${estudiante.apellido}</h5>
+                        <p class="card-text">Número de Identificación: ${estudiante.id}</p>
+                    </div>
+                `;
+                estudiantesContainer.appendChild(estudianteDiv);
+            });
+        } else {
+            const errorLabel = document.createElement('p');
+            errorLabel.textContent = 'No se encontraron estudiantes para esta práctica.';
+            estudiantesContainer.appendChild(errorLabel);
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+        const estudiantesContainer = document.getElementById('estudiantesContainer');
+        estudiantesContainer.innerHTML = 'Error al obtener los datos. Por favor, inténtelo de nuevo más tarde.';
+    });
 
 
-
+}
 
 
 
