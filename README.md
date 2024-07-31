@@ -3,11 +3,10 @@
 Este proyecto es una aplicación web para gestionar las prácticas académicas de los docentes.
 
 ## Requisitos
-1. Usted debe encender primero el back y correrlo en el puerto 8080 para que esta aplicacion funcion 
+### 1. Usted debe encender primero el back y correrlo en el puerto 8080 para que esta aplicacion funcion 
 > **Nota Importante:**
-> ```bash
-> Debe hacer un CD/front para encontrar los archivos html que usted correra en su local
-> ```
+## Debe hacer un CD/front para encontrar los archivos html que usted correra en su local
+>
 
 
 
@@ -21,7 +20,6 @@ Este proyecto es una aplicación web para gestionar las prácticas académicas d
     ```bash
     cd tu-repositorio/front
     ```
-3. Instala las dependencias:
    
 
 ## Uso
