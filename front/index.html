@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <title>Prácticas del Docente</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="scripts/practicas-docente.js" defer></script>
 </head>
 <body>
 <div class="container">
-    <h1 class="mt-5">Bienvenido a la aplicación de prácticas</h1>
-    <p class="lead">Seleccione una opción para ver la información.</p>
-    <a href="practice-details.html" class="btn btn-primary">Detalles de la práctica</a>
-    <a href="students-list.html" class="btn btn-secondary">Listado de estudiantes</a>
-    <a href="practices-summary.html" class="btn btn-info">Resumen de prácticas</a>
+    <h1>Información de las Prácticas del Docente</h1>
+    <div class="form-group">
+        <label for="docenteId">Número de Identificación del Docente:</label>
+        <input type="text" id="docenteId" class="form-control" placeholder="Número de identificación del docente">
+    </div>
+    <button class="btn btn-primary" onclick="cargarPracticas()">Buscar</button>
+    <table class="table table-striped mt-3">
+        <thead>
+        <tr>
+            <th>Destino</th>
+            <th>Fechas</th>
+            <th>Empresa</th>
+        </tr>
+        </thead>
+        <tbody id="tablaPracticas">
+        <!-- Aquí se llenarán las filas de la tabla con JavaScript -->
+        </tbody>
+    </table>
 </div>
-<script src="js/scripts.js"></script>
 </body>
 </html>
