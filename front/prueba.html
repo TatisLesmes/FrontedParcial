@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphQL Client</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        #searchContainer, #addBookContainer {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Books</h1>
+
+<div id="searchContainer">
+    <input type="number" id="bookId" placeholder="Enter book ID">
+    <button onclick="searchBookById()">Search Book</button>
+</div>
+
+<div id="addBookContainer">
+    <h2>Add New Book</h2>
+    <form id="addBookForm">
+        <input type="number" id="newBookId" placeholder="ID" required>
+        <input type="text" id="newBookTitle" placeholder="Title" required>
+        <input type="text" id="newBookAuthorName" placeholder="Author Name" required>
+        <input type="text" id="newBookAuthorCountry" placeholder="Author Country" required>
+        <input type="number" id="newBookPages" placeholder="Pages" required>
+        <input type="number" id="newBookYear" placeholder="Year" required>
+        <button type="button" onclick="addBook()">Add Book</button>
+    </form>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author Name</th>
+        <th>Author Country</th>
+        <th>Pages</th>
+        <th>Year</th>
+    </tr>
+    </thead>
+    <tbody id="books"></tbody>
+</table>
+
+<script>
+    async function fetchGraphQL(query, variables = {}) {
+        const response = await fetch('http://localhost:3600', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({ query, variables })
+        });
+
+        const responseBody = await response.json();
+        return responseBody.data;
+    }
+
+    async function getBooks() {
+        const query = `
+            query {
+                getBooks {
+                    id
+                    title
+                    author {
+                        name
+                        country
+                    }
+                    pages
+                    year
+                }
+            }
+        `;
+        const data = await fetchGraphQL(query);
+        return data.getBooks;
+    }
+
+    async function searchBookById() {
+        const bookId = document.getElementById('bookId').value;
+        const query = `
+            query getBook($idBook: Int!) {
+                getBook(id: $idBook) {
+                    id
+                    title
+                    author {
+                        name
+                        country
+                    }
+                    pages
+                    year
+                }
+            }
+        `;
+        const variables = { idBook: parseInt(bookId) };
+        const data = await fetchGraphQL(query, variables);
+        const booksTbody = document.getElementById('books');
+        booksTbody.innerHTML = ''; // Clear previous results
+        const book = data.getBook;
+        if (book) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${book.id}</td>
+                <td>${book.title}</td>
+                <td>${book.author.name}</td>
+                <td>${book.author.country}</td>
+                <td>${book.pages}</td>
+                <td>${book.year}</td>
+            `;
+            booksTbody.appendChild(row);
+        } else {
+            booksTbody.innerHTML = '<tr><td colspan="6">No book found</td></tr>';
+        }
+    }
+
+    async function addBook() {
+        const id = parseInt(document.getElementById('newBookId').value);
+        const title = document.getElementById('newBookTitle').value;
+        const authorName = document.getElementById('newBookAuthorName').value;
+        const authorCountry = document.getElementById('newBookAuthorCountry').value;
+        const pages = parseInt(document.getElementById('newBookPages').value);
+        const year = parseInt(document.getElementById('newBookYear').value);
+
+        const query = `
+            mutation addBook($id: Int!, $title: String!, $author: typeAuthor!, $pages: Int!, $year: Int!) {
+                addBook(id: $id, title: $title, author: $author, pages: $pages, year: $year) {
+                    id
+                    title
+                    author {
+                        name
+                        country
+                    }
+                    pages
+                    year
+                }
+            }
+        `;
+
+        const variables = {
+            id,
+            title,
+            author: {
+                name: authorName,
+                country: authorCountry
+            },
+            pages,
+            year
+        };
+
+        const data = await fetchGraphQL(query, variables);
+        const newBook = data.addBook;
+        if (newBook) {
+            // Clear the form fields
+            document.getElementById('addBookForm').reset();
+
+            // Refresh the book list
+            await refreshBooks();
+        }
+    }
+
+    async function refreshBooks() {
+        const books = await getBooks();
+        const booksTbody = document.getElementById('books');
+        booksTbody.innerHTML = '';
+        books.forEach(book => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${book.id}</td>
+                <td>${book.title}</td>
+                <td>${book.author.name}</td>
+                <td>${book.author.country}</td>
+                <td>${book.pages}</td>
+                <td>${book.year}</td>
+            `;
+            booksTbody.appendChild(row);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        await refreshBooks();
+    });
+</script>
+</body>
+</html>

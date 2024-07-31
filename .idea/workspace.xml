@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e030ab7-a3a4-4c00-8ff0-ef4428dbf676" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/Estudiantes-Practica.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontedParcial/front/js/Estudiantes-Practica.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontedParcial/front/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontedParcial/front/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontedParcial/front/students-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontedParcial/front/students-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/js/Estudiantes-Practica.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/js/scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/practice-details.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/practices-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/prueba.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/students-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/practice-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/practice-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/students-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/students-list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/FrontedParcial" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -60,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/UPTC/Octavo Semestre/Electiva II/Segundo50/springboot/ParcialLauraYennyfer/FrontedParcial"
+    "last_opened_file_path": "D:/UPTC/Octavo Semestre/Electiva II/Segundo50/springboot/ParcialLauraYennyfer/Parcial"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

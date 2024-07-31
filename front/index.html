@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas del Docente</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="scripts/practicas-docente.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <h1>Información de las Prácticas del Docente</h1>
+    <div class="form-group">
+        <label for="docenteId">Número de Identificación del Docente:</label>
+        <input type="text" id="docenteId" class="form-control" placeholder="Número de identificación del docente">
+    </div>
+    <button class="btn btn-primary" onclick="cargarPracticas()">Buscar</button>
+    <table class="table table-striped mt-3">
+        <thead>
+        <tr>
+            <th>Destino</th>
+            <th>Fechas</th>
+            <th>Empresa</th>
+        </tr>
+        </thead>
+        <tbody id="tablaPracticas">
+        <!-- Aquí se llenarán las filas de la tabla con JavaScript -->
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

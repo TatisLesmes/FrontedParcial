@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes en la Práctica</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="front\css\style.css" rel="stylesheet">-->
+</head>
+<body>
+<div class="container">
+    <h1>Listado de Estudiantes en la Práctica</h1>
+    <div class="form-group">
+        <label for="practicaId">ID de la Práctica:</label>
+        <input type="text" id="practicaId" class="form-control" placeholder="ID de la práctica">
+    </div>
+    <button type="button" class="btn btn-primary">Buscar</button>
+
+    <table class="table table-striped mt-3">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Número de Identificación</th>
+        </tr>
+        </thead>
+        <tbody id="tablaEstudiantes">
+        <!-- Aquí se llenarán las filas de la tabla con JavaScript -->
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
