@@ -19,7 +19,9 @@ Este proyecto es una aplicación web para gestionar las prácticas académicas d
 2. Navega al directorio del proyecto:
     ```bash
     cd tu-repositorio/front
+
     ```
+3. Recuerde que la rama Principal de este repositorio en la rama mainy es ahi donde encontrara el desarrollo
    
 
 ## Uso
