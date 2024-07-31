@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e030ab7-a3a4-4c00-8ff0-ef4428dbf676" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/front/prueba.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/practice-details.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/practices-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/practices-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/js/Estudiantes-Practica.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/practice-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/practice-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/students-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/students-list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,18 +18,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "TatisLesmes"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;TatisLesmes&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/TatisLesmes/FrontedParcial.git",
-    "accountId": "24b1ec44-00fb-441f-8177-0044bcd5b1e4"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/TatisLesmes/FrontedParcial.git&quot;,
+    &quot;accountId&quot;: &quot;24b1ec44-00fb-441f-8177-0044bcd5b1e4&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -38,9 +37,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2jzWezSnHMuKplqMAB3emt6VG4u" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/UPTC/Octavo Semestre/Electiva II/Segundo50/springboot/ParcialLauraYennyfer/demo"
+    "last_opened_file_path": "D:/UPTC/Octavo Semestre/Electiva II/Segundo50/springboot/ParcialLauraYennyfer/Parcial"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
